@@ -202,10 +202,10 @@ module.exports = function(grunt) {
                 grunt.fatal(err);
               }
             });
-        });
 
-        grunt.config('connect.' + taskTarget + '.server-closer', function(cb) {
-          instance.close(cb);
+          grunt.config('connect.' + taskTarget + '.server-closer', function(cb) {
+            instance.close(cb);
+          });
         });
 
         // So many people expect this task to keep alive that I'm adding an option
